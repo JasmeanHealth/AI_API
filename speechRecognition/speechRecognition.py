@@ -2,7 +2,7 @@ import speech_recognition as sr
 import sys
 r = sr.Recognizer()
 
-def getSTT(wavFile = '../data/korean.wav'):
+def getSTT(wavFile = 'F:\JasmeanHealth\AI_API\data\korean.wav'):
     korean_audio = sr.AudioFile(wavFile)
     with korean_audio as source:
         audio = r.record(source)

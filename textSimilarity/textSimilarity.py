@@ -14,9 +14,9 @@ def getTS(word = '갑자기 배가 아파요'):
     scores = util.pytorch_cos_sim(word2vec, embeddings)
     df['score'] = scores[0]
     
-    results = df.sort_values("score", ascending=True).head(10)
+    results = df.sort_values("score", ascending=False)
 
-    js = results.to_json(orient='records')
+    js = results.head(10).to_json(orient='records')
     print(js)
     
     # js = df.to_json(orient='records')
