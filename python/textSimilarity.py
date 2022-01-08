@@ -1,7 +1,7 @@
 import pandas as pd
 import sys
 
-df = pd.read_excel('F:/JasmeanHealth/AI_API/data/211225_data_summary_v1.xlsx')
+df = pd.read_excel('../data/211225_data_summary_v1.xlsx')
 doc_list = df['clincal_imp'].to_list()
 
 from sentence_transformers import SentenceTransformer, util
@@ -18,19 +18,6 @@ def getTS(word = '갑자기 배가 아파요'):
 
     js = results.head(10).to_json(orient='records')
     print(js)
-    
-    # js = df.to_json(orient='records')
-    # print(js)
-    # scores = scores[0]
-
-    # for col in df.columns:
-    #     print(col, end='\t')
-    # print('score')
-    # for i in scores.argsort(descending=True)[0:10]:
-    #     for col in df.columns:
-    #         print(df[col][df.clincal_imp == doc_list[i]].values[0], end = '\t')
-    #     print(f"{scores[i]:.4f}")
-
 
 if __name__ == '__main__':
     getTS(sys.argv[1]) if len(sys.argv) >= 2 else getTS()
