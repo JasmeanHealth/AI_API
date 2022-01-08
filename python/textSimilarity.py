@@ -13,7 +13,6 @@ def getTS(word = '갑자기 배가 아파요'):
     word2vec = model.encode(word, convert_to_tensor=True)
     scores = util.pytorch_cos_sim(word2vec, embeddings)
     df['score'] = scores[0]
-    
     results = df.sort_values("score", ascending=False)
 
     js = results.head(10).to_json(orient='records')
