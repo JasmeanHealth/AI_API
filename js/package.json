@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "iconv-lite": "^0.6.3",
-    "python-shell": "^3.0.1",
-    "utf8": "^3.0.0"
-  }
-}
