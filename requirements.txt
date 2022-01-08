@@ -1,8 +1,10 @@
+# speechRecognition
 SpeechRecognition
 sentence_transformers
 librosa
 numpy == 1.20
-SentenceTransformer
+
+# text
 transformers
 pandas
 openpyxl
